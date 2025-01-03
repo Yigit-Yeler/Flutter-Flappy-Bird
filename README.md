@@ -2,6 +2,10 @@
 
 <img src="assets/sprites/yellowbird-upflap.png" width="100" alt="Flappy Bird">
 
+
+https://github.com/user-attachments/assets/c5be16ad-6080-4ab2-84c3-7c897c963e2e
+
+
 Flutter kullanılarak geliştirilmiş klasik Flappy Bird oyununun bir klonu.
 
 ## 🎮 Özellikler

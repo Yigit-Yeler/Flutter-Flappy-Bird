@@ -1,6 +1,6 @@
 # Flutter Flappy Bird
 
-<img src="assets/images/bird.png" width="100" alt="Flappy Bird">
+<img src="assets/sprites/yellowbird-upflap.png" width="100" alt="Flappy Bird">
 
 Flutter kullanılarak geliştirilmiş klasik Flappy Bird oyununun bir klonu.
 

@@ -26,7 +26,7 @@ class GameWidgetState extends State<GameWidget> {
   Timer? gameTimer;
   int score = 0;
   int highScore = 0;
-  bool debugMode = true;
+  bool debugMode = false;
 
   @override
   void initState() {
@@ -217,49 +217,6 @@ class GameWidgetState extends State<GameWidget> {
                 ],
               ),
             ),
-          if (debugMode) ...[
-            // Boruların hitbox'ları
-            ...pipesX.asMap().entries.map((entry) {
-              final i = entry.key;
-              final pipeX = entry.value;
-              final topPipeBottom = pipesY[i] + GameConstants.pipeHeight;
-              final bottomPipeTop = topPipeBottom + GameConstants.pipeGap;
-
-              return Stack(
-                children: [
-                  // Üst boru hitbox'ı
-                  Positioned(
-                    left: pipeX,
-                    top: 0,
-                    child: Container(
-                      width: GameConstants.pipeWidth,
-                      height: pipesY[i],
-                      decoration: BoxDecoration(
-                        border: Border.all(color: Colors.blue, width: 2),
-                        color: Colors.blue.withOpacity(0.2),
-                      ),
-                    ),
-                  ),
-                  // Alt boru hitbox'ı
-                  Positioned(
-                    left: pipeX,
-                    top: pipesY[i] + GameConstants.pipeGap,
-                    child: Container(
-                      width: GameConstants.pipeWidth,
-                      height: MediaQuery.of(context).size.height -
-                          pipesY[i] -
-                          GameConstants.pipeGap -
-                          GameConstants.groundHeight,
-                      decoration: BoxDecoration(
-                        border: Border.all(color: Colors.blue, width: 2),
-                        color: Colors.blue.withOpacity(0.2),
-                      ),
-                    ),
-                  ),
-                ],
-              );
-            }),
-          ],
         ],
       ),
     );

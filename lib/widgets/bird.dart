@@ -23,28 +23,11 @@ class Bird extends StatelessWidget {
       ),
       child: Transform.rotate(
         angle: rotation,
-        child: Stack(
-          children: [
-            Image.asset(
-              GameConstants.birdSprite,
-              width: GameConstants.birdWidth,
-              height: GameConstants.birdHeight,
-              fit: BoxFit.fill,
-            ),
-            if (debugMode) // Debug modu için hitbox gösterimi
-              Container(
-                width: GameConstants.birdWidth,
-                height:
-                    GameConstants.birdHeight * 0.8, // Hitbox'ı %80 yükseklikte
-                margin: const EdgeInsets.only(
-                    top:
-                        GameConstants.birdHeight * 0.1), // Yukarıdan %10 boşluk
-                decoration: BoxDecoration(
-                  border: Border.all(color: Colors.red, width: 2),
-                  color: Colors.red.withOpacity(0.2),
-                ),
-              ),
-          ],
+        child: Image.asset(
+          GameConstants.birdSprite,
+          width: GameConstants.birdWidth,
+          height: GameConstants.birdHeight,
+          fit: BoxFit.fill,
         ),
       ),
     );
